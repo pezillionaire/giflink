@@ -1,7 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 
-const dirTree = ('./img');
+const src = './src/';
+const dirTree = 'img';
+const output = 'list.json';
 const diretoryTreeToObj = (dir,done) => {
   const results = [];
 
@@ -41,10 +43,9 @@ const diretoryTreeToObj = (dir,done) => {
   });
 };
 
-diretoryTreeToObj(dirTree,(err,res) => {
+diretoryTreeToObj(src + dirTree,(err,res) => {
   if (err) { console.error(err); }
-  // console.log(JSON.stringify(res));
-  fs.writeFile('./_data/list.json',JSON.stringify(res),(err) => {
+  fs.writeFile(src + output,JSON.stringify(res),(err) => {
     if (err) { return console.log(err); }
   });
 });
