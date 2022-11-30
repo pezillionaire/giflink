@@ -1,0 +1,88 @@
+---
+title: 'gifl.ink'
+---
+
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>{{ giflink }}</title>
+    <style>
+      @counter-style file {
+        system: cyclic;
+        symbols: "📄";
+        suffix: "";
+      }
+
+      body {
+        font-family: ui-monospace, Menlo, Monaco, "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+        background-color: #f2f2f2;
+        font-size: 1rem;
+        line-height: 1.5;
+        margin: 1rem;
+      }
+
+      h1 {
+        margin: 0 0 0.5rem;
+      }
+
+      a {
+        color: #0466c8;
+        text-decoration-thickness: 1px;
+      }
+
+      a:hover,
+      a:focus {
+        background-color: #0466c8;
+        color: white;
+        outline: none;
+      }
+
+      hr {
+        margin: 0;
+        height: 1px;
+        color: transparent;
+        background-color: #b2b2b2;
+        border: none;
+      }
+
+      ul {
+        list-style: none;
+        list-style: file inside;
+        padding: 0;
+        margin: 0.5rem 0;
+      }
+
+      li {
+        padding: 0 0.25rem;
+      }
+
+      li a {
+        margin: 0 0.25rem;
+      }
+
+      p {
+        margin: 0.5rem 0;
+      }
+
+      small {
+        color: #b2b2b2;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <h1>{{ title }}</h1>
+    <hr />
+    <ul>
+      {% for images in imgList %}
+      <li><a href="{{ images.name }}">{{ images.name }}</a><small>[{{ images.size }}]</small></li>
+      {% endfor %}
+    </ul>
+    <hr />
+    <p>&rightarrow; a <a rel="me" href="https://mastodon.social/@pezillionaire">pezillionaire</a> cyber page.</p>
+  </body>
+
+</html>

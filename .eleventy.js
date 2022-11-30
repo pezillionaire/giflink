@@ -1,13 +1,9 @@
 module.exports = function (eleventyConfig) {
-  // Output directory: _site
-
-  // Copy `img/` to `_site/img`
-
-  eleventyConfig.addPassthroughCopy("img");
+  eleventyConfig.addPassthroughCopy({ "img/": "/" });
+  // eleventyConfig.addPassthroughCopy({ "CNAME": "CNAME" });
   return {
     dir: {
-      input: 'src',
-      output: 'public'
+      output: 'dist'
     }
   }
 };

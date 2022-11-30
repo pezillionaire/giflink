@@ -6,7 +6,8 @@
   "scripts": {
     "list": "node makelist.js",
     "build": "eleventy",
-    "dev": "eleventy --serve"
+    "dev": "eleventy --serve",
+    "deploy": "eleventy && cp CNAME dist/ && gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,8 @@
   "homepage": "https://gifl.ink",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2"
+  },
+  "dependencies": {
+    "gh-pages": "^4"
   }
 }

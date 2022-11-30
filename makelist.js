@@ -1,9 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 
-const src = './src/';
+const src = './';
 const dirTree = 'img';
-const output = 'list.json';
+const output = '_data/imgList.json';
 const diretoryTreeToObj = (dir,done) => {
   const results = [];
 
