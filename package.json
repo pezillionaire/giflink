@@ -1,0 +1,29 @@
+{
+  "name": "giflink",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eleventy.js",
+  "scripts": {
+    "build": "eleventy",
+    "deploy": "node makelist.js && eleventy && cp CNAME dist/ && gh-pages -d dist",
+    "dev": "eleventy --serve",
+    "list": "node makelist.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pezillionaire/giflink.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pezillionaire/giflink/issues"
+  },
+  "homepage": "https://gifl.ink",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2"
+  },
+  "dependencies": {
+    "gh-pages": "^4"
+  }
+}
