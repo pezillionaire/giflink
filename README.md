@@ -5,7 +5,7 @@ A personal image and gif link repo built with [11ty](https://www.11ty.dev) and [
 ***
 
 ### Basic Commands:
-Generate a json list from `src/giflink` dir:
+Generate JSON list of `src/giflink`:
 
     npm run list
 
@@ -15,7 +15,7 @@ Run local:
 
 Run Build:
 
-    npm run bulid
+    npm run build
 
 Full Build & Deploy:
 
